@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Audiowide", cursive;
+  color: #0b0b0b;
+}
+
+body {
+  background: linear-gradient(45deg, #e676fc, #3488ff);
+  margin: 10vh auto;
+  display: grid;
+  justify-content: center;
+}
+
+.container,
+.contentBox {
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+  margin-top: 10px;
+  width: 12%;
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.container {
+  padding-top: 10px;
+  justify-content: center;
+  height: 80vh;
+  width: 50vw;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.content_box {
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.main_heading {
+  margin-top: 20px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: "Black Ops One", cursive;
+}
+
+.conversion {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.amount {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes inputAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+input[type="number"] {
+  background-color: transparent;
+  width: 100px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+input[type="number"]:hover {
+  animation: inputAnimation 1s ease-in-out infinite;
+}
+
+#convert {
+  background: linear-gradient(45deg, #e676fc, #3488ff);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  color: #040404;
+  font-size: 20px;
+  font-weight: bolder;
+  box-shadow: 4px 4px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 10%;
+  width: 35%;
+}
+
+#convert:active {
+  transform: translateX(4px) translateY(4px);
+  box-shadow: 0 0 0 rgba(31, 38, 135, 0.37);
+}
+#convertBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  color: #3488ff;
+}
+
+#convertBtn:hover {
+  color: #e676fc;
+}
+
+select {
+  background: transparent;
+  border-color: rgba(31, 38, 135, 0.37);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+.amount {
+  background-color: transparent;
+}
+#result {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 30px;
+}
